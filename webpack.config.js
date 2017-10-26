@@ -12,7 +12,8 @@ module.exports = {
 		loaders:[{
 			loader: "babel-loader",
 			include: [
-        		path.resolve(__dirname, 'frontend/js/*.js')
+				path.resolve(__dirname, 'frontend/js')       		
+        		
       	],	
 			exclude: [
   				path.resolve(__dirname, "node_modules"),

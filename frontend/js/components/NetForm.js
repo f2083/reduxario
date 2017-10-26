@@ -19,7 +19,7 @@ class NetForm extends Component{
 	
 	submitHandle(e){
 		e.preventDefault()
-		this.net = new synaptic.Architect.Perceptron(
+		window.net = new synaptic.Architect.Perceptron(
 			this.inputLayer.value, 
 			this.hiddenLayer.value, 
 			this.outputLayer.value

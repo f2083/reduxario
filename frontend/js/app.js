@@ -4,6 +4,7 @@ import store from './store'
 import {positionChange} from './actions'
 import * as synaptic from 'synaptic'
 import NetForm from './components/NetForm'
+import TrainerForm from './components/TrainerForm'
 
 console.log(synaptic)
 window.store = store
@@ -15,14 +16,11 @@ class App extends Component {
     return (
       <div className="App">
     		<NetForm/>
+    		<TrainerForm/>
       </div>
     )
   }
 }
-
-
-console.log(1111321)
-
 
 ReactDOM.render(
   <App/>,
