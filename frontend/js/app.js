@@ -1,28 +1,18 @@
 import React, { Component } from 'react'
+import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
-import store from './store'
 import {positionChange} from './actions'
 import * as synaptic from 'synaptic'
-import NetForm from './components/NetForm'
-import TrainerForm from './components/TrainerForm'
+import store from './store'
+import App from './components/NetCreator'
 
-console.log(synaptic)
-window.store = store
 window.positionChange = positionChange
 window.synaptic = synaptic
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-    		<NetForm/>
-    		<TrainerForm/>
-      </div>
-    )
-  }
-}
+window.store = store
 
 ReactDOM.render(
-  <App/>,
+  (<Provider store={store}>
+  	<App/>
+  	</Provider>),
   document.getElementById('react-container')
 )
